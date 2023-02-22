@@ -1,0 +1,22 @@
+pipeline
+{
+    agents any
+    stages{
+        stage('Build'){
+            bat "mvn clean"
+        }
+        stage('deploy'){
+            echo 'deply the code' 
+        }
+        stage('test'){
+            bat 'mvn test'
+        }
+        stage('unit testing'){
+            bat 'mvn compile'
+        }
+        stage('release'){
+            echo 'releasing the project'
+        }
+            
+    }
+}
